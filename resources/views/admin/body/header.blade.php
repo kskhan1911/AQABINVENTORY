@@ -1,4 +1,4 @@
-  <header id="page-topbar" >
+  <header id="page-topbar" style="background-color:Gray;" >
                 <div class="navbar-header" .bg-secondary.bg-gradient>
                     <div class="d-flex">
                         <!-- LOGO -->

@@ -1,8 +1,29 @@
  <div class="vertical-menu">
 
-                <div data-simplebar class="h-100">
+    <div data-simplebar class="h-100">
 
                     <!-- User details -->
+        @php
+        $id = Auth::user()->id;
+        $adminData = App\Models\User::find($id);
+        @endphp
+
+
+        <div class="mt-3 text-center user-profile">
+
+            <a href="{{ route('admin.profile') }}">
+
+                <div>
+                    <img class="avatar-md rounded-circle" src="{{ (!empty($adminData->profile_image))? url('upload/admin_images/'.$adminData->profile_image):url('upload/no_image.jpg') }}"
+                    alt="Header Avatar">
+                </div>
+
+                <div class="mt-3">
+                    <h4 class="mb-1 font-size-16">{{ $adminData->name }}</h4>
+                    <span class="text-muted"><i class="align-middle ri-record-circle-line font-size-14 text-success"></i> Online</span>
+                </div>
+        </a>
+        </div>
 
 
                     <!--- Sidemenu -->
@@ -130,7 +151,7 @@
         </ul>
     </li>
 
-                            <li>
+                            {{-- <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="ri-profile-line"></i>
                                     <span>Support</span>
@@ -143,7 +164,7 @@
                                     <li><a href="pages-404.html">Error 404</a></li>
                                     <li><a href="pages-500.html">Error 500</a></li>
                                 </ul>
-                            </li>
+                            </li> --}}
 
 
 
