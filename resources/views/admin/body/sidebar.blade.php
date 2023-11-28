@@ -131,13 +131,7 @@
             </ul>
         </li>
 
-
-
-
-
-
-
-                            <li class="menu-title">Stock</li>
+                            {{-- <li class="menu-title">Stock</li> --}}
 
     <li>
         <a href="javascript: void(0);" class="has-arrow waves-effect">
